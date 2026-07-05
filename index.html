@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +7,7 @@
   <title>Ahmed Rabie | Backend Developer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -15,31 +15,49 @@
     <span class="stars stars-one"></span>
     <span class="stars stars-two"></span>
     <span class="stars stars-three"></span>
-    <span class="orb orb-cyan"></span>
-    <span class="orb orb-violet"></span>
+    <span class="orb orb-primary"></span>
+    <span class="orb orb-secondary"></span>
   </div>
 
   <header class="site-header">
     <nav class="nav">
       <a class="resume-link" href="assets/Ahmed_Rabie_CV.pdf" target="_blank" rel="noreferrer">
         <span class="resume-icon">▣</span>
-        <span>Resume</span>
+        <span data-i18n="resume">Resume</span>
       </a>
 
-      <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-
       <div class="nav-links">
-        <a href="#about">About</a>
-        <a href="#education">Education</a>
-        <a href="#work">Work</a>
-        <a href="#leadership">Highlights</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+        <a href="#about" data-i18n="nav_about">About</a>
+        <a href="#education" data-i18n="nav_education">Education</a>
+        <a href="#work" data-i18n="nav_work">Work</a>
+        <a href="#highlights" data-i18n="nav_highlights">Highlights</a>
+        <a href="#skills" data-i18n="nav_skills">Skills</a>
+        <a href="#projects" data-i18n="nav_projects">Projects</a>
+        <a href="#contact" data-i18n="nav_contact">Contact</a>
+      </div>
+
+      <div class="header-controls">
+        <div class="lang-switch" role="group" aria-label="Language">
+          <button type="button" data-lang="en">EN</button>
+          <button type="button" data-lang="ar">ع</button>
+          <button type="button" data-lang="de">DE</button>
+        </div>
+
+        <button class="theme-toggle" type="button" aria-label="Toggle theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <circle cx="12" cy="12" r="4.4"/>
+            <path d="M12 2.5v2.4M12 19.1v2.4M4.3 4.3l1.7 1.7M18 18l1.7 1.7M2.5 12h2.4M19.1 12h2.4M4.3 19.7 6 18M18 6l1.7-1.7"/>
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20.8 14.5A8.6 8.6 0 0 1 9.5 3.2a8.6 8.6 0 1 0 11.3 11.3Z"/>
+          </svg>
+        </button>
+
+        <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
     </nav>
   </header>
@@ -52,14 +70,14 @@
         </div>
 
         <div class="hero-copy reveal">
-          <p class="intro">Hi, I'm</p>
-          <h1><span>Ahmed</span> Rabie</h1>
-          <p class="role">I'm a <span>Backend Developer</span><b class="cursor">|</b></p>
-          <p class="tagline">Building scalable APIs, real-time systems, and robust server-side architectures.</p>
+          <p class="intro" data-i18n="hero_hi">Hi, I'm</p>
+          <h1><span data-i18n="hero_first">Ahmed</span> <em data-i18n="hero_last">Rabie</em></h1>
+          <p class="role"><span data-i18n="hero_role_label">I'm a</span> <span class="role-accent" data-i18n="hero_role">Backend Developer</span><b class="cursor">|</b></p>
+          <p class="tagline" data-i18n="hero_tagline">Building scalable APIs, real-time systems, and robust server-side architectures.</p>
 
           <div class="hero-actions">
-            <a class="btn primary" href="#contact">Contact Me</a>
-            <a class="btn ghost" href="assets/Ahmed_Rabie_CV.pdf" download target="_blank" rel="noreferrer">Download CV</a>
+            <a class="btn primary" href="#contact" data-i18n="contact_me">Contact Me</a>
+            <a class="btn ghost" href="assets/Ahmed_Rabie_CV.pdf" download target="_blank" rel="noreferrer" data-i18n="download_cv">Download CV</a>
           </div>
         </div>
       </div>
@@ -71,18 +89,18 @@
 
     <section class="section" id="about">
       <div class="section-title reveal">
-        <p>Introduction</p>
-        <h2>About Me.</h2>
+        <p data-i18n="about_kicker">Introduction</p>
+        <h2 data-i18n="about_title">About Me.</h2>
       </div>
       <div class="about-grid">
         <article class="about-copy reveal">
-          <p>
+          <p data-i18n="about_p1">
             Results-driven Backend Developer with 4+ years of experience building scalable server-side
             applications and RESTful APIs. Proven expertise in Node.js, Express.js, Socket.io, and database
             architecture with a track record of delivering real-time chat applications, CRM systems, and
             enterprise solutions.
           </p>
-          <p>
+          <p data-i18n="about_p2">
             My work covers Nest.js and GraphQL services, TypeScript across the full stack, MongoDB and
             PostgreSQL data modeling, Docker and CI/CD pipelines, and VPS deployment with security hardening
             and 99.9% uptime.
@@ -92,19 +110,19 @@
         <div class="service-grid">
           <article class="service-card reveal">
             <span>01</span>
-            <h3>RESTful & GraphQL APIs</h3>
+            <h3 data-i18n="svc1">RESTful &amp; GraphQL APIs</h3>
           </article>
           <article class="service-card reveal">
             <span>02</span>
-            <h3>Real-time Apps with Socket.io</h3>
+            <h3 data-i18n="svc2">Real-time Apps with Socket.io</h3>
           </article>
           <article class="service-card reveal">
             <span>03</span>
-            <h3>Database Design & Optimization</h3>
+            <h3 data-i18n="svc3">Database Design &amp; Optimization</h3>
           </article>
           <article class="service-card reveal">
             <span>04</span>
-            <h3>DevOps & VPS Deployment</h3>
+            <h3 data-i18n="svc4">DevOps &amp; VPS Deployment</h3>
           </article>
         </div>
       </div>
@@ -112,134 +130,134 @@
 
     <section class="section" id="education">
       <div class="section-title reveal">
-        <p>Academic Track</p>
-        <h2>Education.</h2>
+        <p data-i18n="edu_kicker">Academic Track</p>
+        <h2 data-i18n="edu_title">Education.</h2>
       </div>
       <div class="timeline">
         <article class="timeline-card reveal">
           <span class="dot"></span>
-          <p class="date">2014 - 2018</p>
-          <h3>Bachelor of Management Information Systems</h3>
-          <p>Cairo Higher Institute | Graduated with Excellence Graduation Project</p>
+          <p class="date" data-i18n="edu1_date">2014 - 2018</p>
+          <h3 data-i18n="edu1_title">Bachelor of Management Information Systems</h3>
+          <p data-i18n="edu1_desc">Cairo Higher Institute | Graduated with Excellence Graduation Project</p>
         </article>
         <article class="timeline-card reveal">
           <span class="dot"></span>
-          <p class="date">2023</p>
-          <h3>MEAN Stack Course</h3>
-          <p>Orange Digital Center</p>
+          <p class="date" data-i18n="edu2_date">2023</p>
+          <h3 data-i18n="edu2_title">MEAN Stack Course</h3>
+          <p data-i18n="edu2_desc">Orange Digital Center</p>
         </article>
         <article class="timeline-card reveal">
           <span class="dot"></span>
-          <p class="date">2021 - 2022</p>
-          <h3>MEAN Stack & PHP, MySQL, Laravel Courses</h3>
-          <p>National Telecommunication Institute (NTI)</p>
+          <p class="date" data-i18n="edu3_date">2021 - 2022</p>
+          <h3 data-i18n="edu3_title">MEAN Stack &amp; PHP, MySQL, Laravel Courses</h3>
+          <p data-i18n="edu3_desc">National Telecommunication Institute (NTI)</p>
         </article>
         <article class="timeline-card reveal">
           <span class="dot"></span>
-          <p class="date">2019</p>
-          <h3>Frontend Development Nanodegree</h3>
-          <p>Udacity</p>
+          <p class="date" data-i18n="edu4_date">2019</p>
+          <h3 data-i18n="edu4_title">Frontend Development Nanodegree</h3>
+          <p data-i18n="edu4_desc">Udacity</p>
         </article>
       </div>
     </section>
 
     <section class="section" id="work">
       <div class="section-title reveal">
-        <p>What I have done so far</p>
-        <h2>Work Experience.</h2>
+        <p data-i18n="work_kicker">What I have done so far</p>
+        <h2 data-i18n="work_title">Work Experience.</h2>
       </div>
       <div class="timeline">
         <article class="timeline-card reveal">
           <span class="dot"></span>
-          <p class="date">Jul 2025 - Present</p>
-          <h3>Full Stack Developer</h3>
-          <p class="company">The Waseet | Cairo, Egypt</p>
+          <p class="date" data-i18n="work1_date">Jul 2025 - Present</p>
+          <h3 data-i18n="work1_title">Full Stack Developer</h3>
+          <p class="company" data-i18n="work1_company">The Waseet | Cairo, Egypt</p>
           <ul>
-            <li>Developed scalable backend services using Nest.js, Express, TypeORM, and GraphQL to support complex business logic.</li>
-            <li>Implemented responsive UI features based on Figma designs using React and Next.js.</li>
-            <li>Implemented TypeScript across the full stack to enhance code quality, type safety, and maintainability.</li>
-            <li>Collaborated with product owners and QA engineers to align features with business goals and quality standards.</li>
+            <li data-i18n="work1_b1">Developed scalable backend services using Nest.js, Express, TypeORM, and GraphQL to support complex business logic.</li>
+            <li data-i18n="work1_b2">Implemented responsive UI features based on Figma designs using React and Next.js.</li>
+            <li data-i18n="work1_b3">Implemented TypeScript across the full stack to enhance code quality, type safety, and maintainability.</li>
+            <li data-i18n="work1_b4">Collaborated with product owners and QA engineers to align features with business goals and quality standards.</li>
           </ul>
         </article>
         <article class="timeline-card reveal">
           <span class="dot"></span>
-          <p class="date">Dec 2023 - Jul 2024</p>
-          <h3>Backend Developer - Node.js</h3>
-          <p class="company">Trust Edge | Cairo, Egypt</p>
+          <p class="date" data-i18n="work2_date">Dec 2023 - Jul 2024</p>
+          <h3 data-i18n="work2_title">Backend Developer - Node.js</h3>
+          <p class="company" data-i18n="work2_company">Trust Edge | Cairo, Egypt</p>
           <ul>
-            <li>Developed real-time messaging features using Socket.io, supporting 10,000+ concurrent users with low latency.</li>
-            <li>Designed efficient data models for real-time chat applications, optimizing query performance by 40%.</li>
-            <li>Integrated Firebase Cloud Messaging for push notifications with a 95% delivery rate across mobile and web.</li>
-            <li>Architected WebSocket infrastructure with automatic reconnection and message queuing.</li>
+            <li data-i18n="work2_b1">Developed real-time messaging features using Socket.io, supporting 10,000+ concurrent users with low latency.</li>
+            <li data-i18n="work2_b2">Designed efficient data models for real-time chat applications, optimizing query performance by 40%.</li>
+            <li data-i18n="work2_b3">Integrated Firebase Cloud Messaging for push notifications with a 95% delivery rate across mobile and web.</li>
+            <li data-i18n="work2_b4">Architected WebSocket infrastructure with automatic reconnection and message queuing.</li>
           </ul>
         </article>
         <article class="timeline-card reveal">
           <span class="dot"></span>
-          <p class="date">Jan 2023 - Jun 2023</p>
-          <h3>Web Developer - MEAN Stack</h3>
-          <p class="company">Comma Solutions | Cairo, Egypt</p>
+          <p class="date" data-i18n="work3_date">Jan 2023 - Jun 2023</p>
+          <h3 data-i18n="work3_title">Web Developer - MEAN Stack</h3>
+          <p class="company" data-i18n="work3_company">Comma Solutions | Cairo, Egypt</p>
           <ul>
-            <li>Engineered RESTful APIs with Node.js, Express, and MongoDB for the Comma CRM system serving 5,000+ daily active users.</li>
-            <li>Integrated Facebook, Instagram, and WhatsApp APIs to centralize customer communications.</li>
-            <li>Reduced database query response times by 60% through efficient data models and proper indexing.</li>
-            <li>Deployed applications on VPS servers with SSL, automated backups, and monitoring ensuring 99.9% uptime.</li>
+            <li data-i18n="work3_b1">Engineered RESTful APIs with Node.js, Express, and MongoDB for the Comma CRM system serving 5,000+ daily active users.</li>
+            <li data-i18n="work3_b2">Integrated Facebook, Instagram, and WhatsApp APIs to centralize customer communications.</li>
+            <li data-i18n="work3_b3">Reduced database query response times by 60% through efficient data models and proper indexing.</li>
+            <li data-i18n="work3_b4">Deployed applications on VPS servers with SSL, automated backups, and monitoring ensuring 99.9% uptime.</li>
           </ul>
         </article>
         <article class="timeline-card reveal">
           <span class="dot"></span>
-          <p class="date">Jan 2022 - Dec 2022</p>
-          <h3>Backend Developer</h3>
-          <p class="company">Arms Consulting Solutions | Cairo, Egypt</p>
+          <p class="date" data-i18n="work4_date">Jan 2022 - Dec 2022</p>
+          <h3 data-i18n="work4_title">Backend Developer</h3>
+          <p class="company" data-i18n="work4_company">Arms Consulting Solutions | Cairo, Egypt</p>
           <ul>
-            <li>Developed RESTful APIs with Node.js, Express, MongoDB, and Mongoose for a Real Estate CRM system.</li>
-            <li>Designed complex data models with relationships across properties, clients, and transactions.</li>
-            <li>Integrated the CRM with social media APIs to automate lead capture and customer engagement.</li>
-            <li>Created an automated testing suite using Jest, achieving 80% code coverage.</li>
+            <li data-i18n="work4_b1">Developed RESTful APIs with Node.js, Express, MongoDB, and Mongoose for a Real Estate CRM system.</li>
+            <li data-i18n="work4_b2">Designed complex data models with relationships across properties, clients, and transactions.</li>
+            <li data-i18n="work4_b3">Integrated the CRM with social media APIs to automate lead capture and customer engagement.</li>
+            <li data-i18n="work4_b4">Created an automated testing suite using Jest, achieving 80% code coverage.</li>
           </ul>
         </article>
         <article class="timeline-card reveal">
           <span class="dot"></span>
-          <p class="date">2017 - 2020</p>
-          <h3>Web & Frontend Developer</h3>
-          <p class="company">Visit Ventures, OSAIMI Medical Tourism, G22 Solutions | Cairo, Egypt</p>
+          <p class="date" data-i18n="work5_date">2017 - 2020</p>
+          <h3 data-i18n="work5_title">Web &amp; Frontend Developer</h3>
+          <p class="company" data-i18n="work5_company">Visit Ventures, OSAIMI Medical Tourism, G22 Solutions | Cairo, Egypt</p>
           <ul>
-            <li>Built responsive interfaces and web forms using Angular, Bootstrap, and CakePHP.</li>
-            <li>Developed and maintained WordPress websites, improving organic search rankings by 45% through SEO.</li>
-            <li>Implemented component-based architecture and integrated RESTful APIs with backend teams.</li>
+            <li data-i18n="work5_b1">Built responsive interfaces and web forms using Angular, Bootstrap, and CakePHP.</li>
+            <li data-i18n="work5_b2">Developed and maintained WordPress websites, improving organic search rankings by 45% through SEO.</li>
+            <li data-i18n="work5_b3">Implemented component-based architecture and integrated RESTful APIs with backend teams.</li>
           </ul>
         </article>
       </div>
     </section>
 
-    <section class="section" id="leadership">
+    <section class="section" id="highlights">
       <div class="section-title reveal">
-        <p>Impact</p>
-        <h2>Highlights.</h2>
+        <p data-i18n="hl_kicker">Impact</p>
+        <h2 data-i18n="hl_title">Highlights.</h2>
       </div>
       <div class="stats-grid">
         <article class="stat-card reveal">
           <strong>10,000+</strong>
-          <span>Concurrent users on real-time messaging</span>
+          <span data-i18n="hl1">Concurrent users on real-time messaging</span>
         </article>
         <article class="stat-card reveal">
           <strong>60%</strong>
-          <span>Faster database query response times</span>
+          <span data-i18n="hl2">Faster database query response times</span>
         </article>
         <article class="stat-card reveal">
           <strong>99.9%</strong>
-          <span>Uptime on production VPS deployments</span>
+          <span data-i18n="hl3">Uptime on production VPS deployments</span>
         </article>
         <article class="stat-card reveal">
           <strong>80%</strong>
-          <span>Automated test coverage with Jest</span>
+          <span data-i18n="hl4">Automated test coverage with Jest</span>
         </article>
       </div>
     </section>
 
     <section class="section" id="skills">
       <div class="section-title reveal">
-        <p>My technical orbit</p>
-        <h2>Skills.</h2>
+        <p data-i18n="skills_kicker">My technical orbit</p>
+        <h2 data-i18n="skills_title">Skills.</h2>
       </div>
       <div class="skills-cloud reveal">
         <span>Node.js</span>
@@ -263,7 +281,7 @@
         <span>Jest</span>
         <span>Docker</span>
         <span>CI/CD</span>
-        <span>Git & GitHub</span>
+        <span>Git &amp; GitHub</span>
         <span>Linux</span>
         <span>Microservices</span>
         <span>VPS Deployment</span>
@@ -272,33 +290,33 @@
 
     <section class="section" id="projects">
       <div class="section-title reveal">
-        <p>Selected work</p>
-        <h2>Projects.</h2>
+        <p data-i18n="proj_kicker">Selected work</p>
+        <h2 data-i18n="proj_title">Projects.</h2>
       </div>
       <div class="projects-grid">
         <article class="project-card reveal">
           <div class="project-cover">API</div>
-          <h3>Concert Reservation</h3>
-          <p>Concert reservation app APIs built with Node.js, covering booking flows and event management.</p>
-          <a href="https://github.com/ARMMM96/ConcertReservation" target="_blank" rel="noreferrer">View Repository</a>
+          <h3 data-i18n="proj1_title">Concert Reservation</h3>
+          <p data-i18n="proj1_desc">Concert reservation app APIs built with Node.js, covering booking flows and event management.</p>
+          <a href="https://github.com/ARMMM96/ConcertReservation" target="_blank" rel="noreferrer" data-i18n="view_repo">View Repository</a>
         </article>
         <article class="project-card reveal">
           <div class="project-cover">CRM</div>
-          <h3>CRM Property</h3>
-          <p>Node.js CRM application for selling property, with data models for properties, clients, and transactions.</p>
-          <a href="https://github.com/ARMMM96/CRM-Property" target="_blank" rel="noreferrer">View Repository</a>
+          <h3 data-i18n="proj2_title">CRM Property</h3>
+          <p data-i18n="proj2_desc">Node.js CRM application for selling property, with data models for properties, clients, and transactions.</p>
+          <a href="https://github.com/ARMMM96/CRM-Property" target="_blank" rel="noreferrer" data-i18n="view_repo">View Repository</a>
         </article>
         <article class="project-card reveal">
           <div class="project-cover">API</div>
-          <h3>La-Vie</h3>
-          <p>Node.js REST APIs for the La-Vie platform with authentication and resource management.</p>
-          <a href="https://github.com/ARMMM96/La-Vie" target="_blank" rel="noreferrer">View Repository</a>
+          <h3 data-i18n="proj3_title">La-Vie</h3>
+          <p data-i18n="proj3_desc">Node.js REST APIs for the La-Vie platform with authentication and resource management.</p>
+          <a href="https://github.com/ARMMM96/La-Vie" target="_blank" rel="noreferrer" data-i18n="view_repo">View Repository</a>
         </article>
         <article class="project-card reveal">
           <div class="project-cover">NG</div>
-          <h3>CRM Property Front</h3>
-          <p>Angular frontend application for the CRM Property system with role-based dashboards.</p>
-          <a href="https://github.com/ARMMM96/CRM-Property-Front" target="_blank" rel="noreferrer">View Repository</a>
+          <h3 data-i18n="proj4_title">CRM Property Front</h3>
+          <p data-i18n="proj4_desc">Angular frontend application for the CRM Property system with role-based dashboards.</p>
+          <a href="https://github.com/ARMMM96/CRM-Property-Front" target="_blank" rel="noreferrer" data-i18n="view_repo">View Repository</a>
         </article>
       </div>
     </section>
@@ -306,9 +324,9 @@
     <section class="section contact-section" id="contact">
       <div class="contact-panel reveal">
         <div>
-          <p class="mini-title">Get in touch</p>
-          <h2>Contact.</h2>
-          <p>Cairo, Egypt | Backend Developer - Node.js</p>
+          <p class="mini-title" data-i18n="contact_kicker">Get in touch</p>
+          <h2 data-i18n="contact_title">Contact.</h2>
+          <p data-i18n="contact_line">Cairo, Egypt | Backend Developer - Node.js</p>
         </div>
         <div class="contact-links">
           <a href="mailto:ahmed.rabie.works@gmail.com">ahmed.rabie.works@gmail.com</a>
@@ -326,7 +344,7 @@
   </main>
 
   <footer class="footer">
-    <p>© <span id="year"></span> Ahmed Rabie</p>
+    <p>© <span id="year"></span> <span data-i18n="footer_name">Ahmed Rabie</span></p>
   </footer>
 
   <script src="script.js"></script>
